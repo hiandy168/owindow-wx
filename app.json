@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/girls/index",
     "pages/foods/index",
     "pages/books/index",
-    "pages/girls/index",
+    
     
     "pages/logs/logs"
   ],

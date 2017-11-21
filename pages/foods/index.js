@@ -27,17 +27,28 @@ Page({
     let that = this
     let s_input = e.detail.value
     let s_show = s_input.length != 0 ? true : false
-    that.setData({
-      inputdata: s_input,
-      clearinput: s_show,
-    })
+    if (s_show === false){
+      that.setData({
+        inputdata: s_input,
+        clearinput: s_show,
+        datalist: [],
+        showbody: "navs"
+      })
+    }else{
+      that.setData({
+        inputdata: s_input,
+        clearinput: s_show,
+      })
+    }
   },
 
   inputClear: function (e) {
     let that = this
     that.setData({
       inputdata: "",
-      clearinput: false
+      clearinput: false,
+      datalist: [],
+      showbody: "navs"
     })
   },
 
@@ -85,6 +96,8 @@ Page({
     that.setData({
       inputdata: _data,
       clearinput: true
+    },()=>{
+      that.goSearch(e)
     })
   },
 
