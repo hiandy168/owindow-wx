@@ -1,1 +1,97 @@
 /* pages/girls/index.wxss */
+.foods{
+  width: 100%;
+  min-height:100vh;
+}
+
+/*标签  */
+
+.bookmark-list{
+    text-align: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    color: darkorchid;
+    padding: 3px;
+    margin: 3px;
+    background-color: pink;
+}
+
+/*内容布局  */
+.books-search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  background-color:#FFF0F5;
+  justify-content:center;
+}
+.result-content{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  width:50%;
+}
+
+.result-top{
+  display:flex;
+}
+
+.result-more{
+  position: absolute;
+  right:40rpx;
+  bottom:50rpx;
+  font-size:10pt;
+}
+
+.result-left{
+  width: 100%;
+  display: inline-flex;
+}
+
+.result-left-img{
+  width:100%;
+}
+
+.result-right{
+  display:inline-flex;
+  flex-direction:column;
+  position:absolute;
+  bottom:10rpx;
+  left:20px;
+  color:pink;
+  font-size:10pt;
+  width:80%;
+}
+
+.result-right-bwh-content{
+  display:inline-flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.result-right-title{
+  font-size:14pt;
+  margin:10rpx 10rpx 10rpx 0;
+}
+
+/*轮播图  */
+
+.img-swiper{
+  height:100vh;
+}
+
+.swiper-image{
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+/*隐藏  */
+.hiddens{
+  display: none;
+}
