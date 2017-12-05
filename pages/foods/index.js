@@ -16,7 +16,6 @@ Page({
     // 数据列表
     datalist:[],
     showbody:"navs",
-    
     fatherkeys: ['name', 'cookingtime', 'peoplenum', 'tag','content'],
 
 
@@ -71,21 +70,19 @@ Page({
           that.setData({
             datalist: [],
             showbody: "navs"
+          },()=>{
+            wx.showToast({
+              title: '未找到相关信息',
+              icon:"loading",
+              duration: 1000,
+            })
           })
         }else{
-          console.log(res.data.result.result.list)
           that.setData({
             datalist: res.data.result.result.list,
             showbody: "getdata"
           })
         }
-        
-        
-        // wx.showToast({
-        //   title: '收到',
-        //   icon: '',
-        //   duration: 2000
-        // })
       }
     })
   },
@@ -105,7 +102,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this
+    that.setData({
+      inputdata:"童子鸡"
+    },()=>{
+      that.goSearch()
+    })
   },
 
   /**

@@ -1,10 +1,9 @@
 {
   "pages":[
+    
+    "pages/books/index",
     "pages/girls/index",
     "pages/foods/index",
-    "pages/books/index",
-    
-    
     "pages/logs/logs"
   ],
   "window":{

@@ -6,9 +6,12 @@
 
   <!--展示列表  -->
   <view class='{{datalist.length > 0 ? "books-search":"hiddens"}}'>
-    <block wx:for="{{bookmark}}" wx:key="index" wx:for-item="item">
+    <view class='bookmarkcontent'>
+      <block wx:for="{{bookmark}}" wx:key="index" wx:for-item="item">
           <text class="bookmark-list" bindtap='inputmark' data-values="{{item}}">{{item}}</text>
       </block> 
+    </view>
+    
     <block wx:for="{{datalist}}" wx:key="{{index}}" >
         <view class="result-content" >
             <view class='result-top'>
@@ -31,10 +34,14 @@
   </view>
 </view>
 
-<swiper class='{{showWhich == "swiper"? "img-swiper":"hiddens"}}' indicator-dots="true" autoplay="true" interval="5000" duration="1000" bindtap='backimg'>  
-    <block wx:for="{{swiperimglist}}" wx:key="index" wx:if="{{swiperimglist[index]}}">  
+<swiper class='{{showWhich == "swiper"? "img-swiper":"hiddens"}}' indicator-dots="true" autoplay="true" interval="2000" duration="1000" bindtap='backimg'>  
+    <block wx:for="{{swiperimglist}}" wx:key="index" wx:for-item="items">  
       <swiper-item >  
-        <image  src="{{item}}" class="swiper-image" mode="aspectFill" binderror='binderrorimg' data-errorimg="{{item}}"/>  
+        <image  wx:if="{{items}}" src="{{items || errorimg[1]}}" 
+                class="swiper-image" 
+                mode="aspectFill" 
+                binderror="bindErrorimg" 
+                data-errorimg="{{index}}"/>  
       </swiper-item>  
     </block> 
 </swiper>

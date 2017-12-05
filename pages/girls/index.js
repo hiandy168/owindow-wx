@@ -17,8 +17,7 @@ Page({
     swiperCurrent: 0 
   },
 
-  binderrorimg: function(e){
-    console.log("aaaaaaaaaaa")
+  bindErrorimg: function(e){
     let that = this
     let _errObj = {}
     let _errorImgIndex = e.target.dataset.errorimg
@@ -35,7 +34,6 @@ Page({
   showswiper:function(e){
     let _swiperdata = e.target.dataset.listvalue
     if (_swiperdata.length < 2) { return } 
-    console.log(_swiperdata)   
     let that = this
     that.setData({
       showWhich: "swiper",
@@ -85,7 +83,7 @@ Page({
       method: 'get',
       header: { "Content-Type": "application/x-www-form-urlencoded" },
       success: function (res) {
-        console.log(res.data.showapi_res_body.pagebean)
+        // console.log(res.data.showapi_res_body.pagebean)
         that.setData({
           datalist: res.data.showapi_res_body.pagebean.contentlist,
           showWhich: "imgs",

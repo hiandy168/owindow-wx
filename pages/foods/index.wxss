@@ -72,13 +72,12 @@
 .books-search{
   display: flex;
   flex-direction: column;
-
+  background:#E0FFFF;
 }
 .result-content{
   display: flex;
   flex-direction: column;
   padding-bottom:30rpx;
-  border-bottom:2px dotted; 
 }
 
 .result-top{
